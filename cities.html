@@ -11,8 +11,40 @@
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" 
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+    <style>
+        .table th{
+            background-color: #007bff;
+            color: white;
+        }
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: #000
+        }
+        .table-hover tbody tr:hover {
+            background-color: #cce5ff
+        }
+        .table td {
+            border-color: #ccc
+        }
+    </style>
 </head>
 <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a class="navbar-brand" href="cities.html">A Few Cities</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarBar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="basic.html">Basic</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="advanced.html">Advanced</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <div class="container">
         <h1>Visit Cities with Landon Swavey</h1>
         <div class="row">
@@ -56,7 +88,7 @@
                 Yokohama
             </div>
         </div>
-        
+
         <p>Neither break; they are working the way that my div classes should be working without any additions.<br>
             The cities will disappear first though because they are on the lower end of the page.<br>
             The header corresponds with making the browser smaller though.</p>
@@ -82,11 +114,51 @@
             <table class="table table-bordered table-striped table-hover table-md">
                 <caption class="text-center bg-light">List of Letters, Cities, Rivers, and Trees</caption>
                 <thread class="thread-light">
-                    <th scope="col">Letter</th>
-                    <th scope="col">City</th>
-                    <th scope="col">River</th>
-                    <th scope="col">Tree</th>
+                    <tr>
+                        <th scope="col">Letter</th>
+                        <th scope="col">City</th>
+                        <th scope="col">River</th>
+                        <th scope="col">Tree</th>
+                    </tr>
                 </thread>
+                <tbody>
+                    <tr>
+                        <th scope="row">S</th>
+                        <td>San Francisco City</td>
+                        <td>Sabine River</td>
+                        <td>Sapodilla</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">W</th>
+                        <td>Wellington</td>
+                        <td>Wabash River</td>
+                        <td>Willow</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">A</th>
+                        <td>Amsterdam</td>
+                        <td>American River</td>
+                        <td>Acacia</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">V</th>
+                        <td>Venice</td>
+                        <td>Van Duzen River</td>
+                        <td>Verbas</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">E</th>
+                        <td>Edinburgh</td>
+                        <td>Econfina River</td>
+                        <td>Euodia</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Y</th>
+                        <td>Yokohama</td>
+                        <td>Yaak River</td>
+                        <td>Yuzuri-Hu</td>
+                    </tr>
+                </tbody>
             </table>
         </div>
 
@@ -108,7 +180,36 @@
                 </div>
             </div>  
         </div>
-    </div>
+
+        <div class="dropdown mt-5">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Make a Selection
+           </button>
+             <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="basic.html">Basic</a></li>
+                <li><a class="dropdown-item" href="advanced.html">Advanced</a></li>
+             </ul>
+        </div>
+
+        <form>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input tpye="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">Enter your email address</small>
+            </div>
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" class="form-control" id="city" placeholder="Enter your city">
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="newsletter">
+                <label class="form-check-label" for="newsletter">Sign up for newsletter</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        </div>
+
 
 </body>
 </html>
